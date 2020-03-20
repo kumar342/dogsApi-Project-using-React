@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import Header from "./header";
+import Footer from "./footer";
 
 export default class DogsPage extends Component {
   state = {
@@ -35,7 +37,17 @@ export default class DogsPage extends Component {
   render() {
     return (
       <div>
-        <img src={this.state.dogs} />
+        <Header />
+        <h6 className="ml-3">
+          Please refresh the page to get random images of the dog
+        </h6>
+        <img className="ml-3" src={this.state.dogs} />
+        <p className="ml-3">
+          Don't you like the dog! then go to dashboard and select another dog
+        </p>
+        <br />
+        <br />
+        <Footer />
       </div>
     );
   }

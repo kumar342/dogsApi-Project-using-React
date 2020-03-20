@@ -1,8 +1,7 @@
-const express = require('express');
+const express = require("express");
 const routes = express.Router();
-const { users } = require('./countrollers');
-const { login, register } = require('./countrollers');
-
+const { users } = require("./countrollers");
+const { login, register } = require("./countrollers");
 
 routes.get("/", users);
 routes.post("/login", login);

@@ -1,16 +1,30 @@
-import React from "react";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
-const Header = () => {
-  return (
-    <div>
-      <nav
-        className="navbar navbar-dark bg-primary"
-        style={{ margin: "10px ", color: "#fff", justifyContent: "center" }}
-      >
-        <h1>Dashboard Page</h1>
-      </nav>
-    </div>
-  );
-};
-
-export default Header;
+export default class Header extends Component {
+  render() {
+    return (
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div>
+            <Link to="/dashboard">Dashboard</Link> <strong> </strong>
+            <Link to="/login" className="ml-3">
+              Logout
+            </Link>
+          </div>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </nav>
+      </div>
+    );
+  }
+}

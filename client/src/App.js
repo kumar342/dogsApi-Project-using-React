@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Header from "./components/header";
 import Welcome from "./components/welcome";
 import Login from "./components/login";
 import Register from "./components/register";
@@ -13,8 +12,6 @@ export default class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
-        <br />
         <Switch>
           <Route path="/" exact component={Welcome} />
           <Route path="/register" component={Register} />
@@ -22,7 +19,6 @@ export default class App extends Component {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/dogsPage/:dogName" component={DogsPage} />
         </Switch>
-        <br />
       </React.Fragment>
     );
   }
