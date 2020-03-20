@@ -4,14 +4,14 @@ import Login from "./components/login";
 import Register from "./components/register";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Dashboard from "./components/dashboard";
 import DogsPage from "./components/dogsPage";
 
 export default class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Welcome} />
           <Route path="/register" component={Register} />
@@ -19,7 +19,7 @@ export default class App extends Component {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/dogsPage/:dogName" component={DogsPage} />
         </Switch>
-      </React.Fragment>
+      </BrowserRouter>
     );
   }
 }
